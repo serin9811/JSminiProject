@@ -4,9 +4,7 @@
 
 ## Languages 
 -Javascript
-
 -HTML
-
 -CSS
 
 ##Team members
