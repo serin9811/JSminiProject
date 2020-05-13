@@ -4,9 +4,9 @@
 
 ## Languages 
 *Javascript
+
 *HTML
+
 *CSS
 
-*[Team Members](#team-members)
-#<a name= "team-members"></a>Team Members
-*"Mira Kim"<mirasoy@google.com>
+##Team members
