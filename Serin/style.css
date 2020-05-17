@@ -45,13 +45,12 @@
 }
 
 /* 팝업을 띄우는 메인버튼 */
-
-//팝업 헤더 글자체 변경해봄! 
+/* 팝업 헤더에서 사용되는 폰트 */
 h1 {
   font-family: "Jua", sans-serif;
 }
 
-//팝업 헤더 배경색 없애고 포인트 컬러로 폰트에 색깔줌
+/* 팝업 헤더  */
 #popupBoxT h1 {
   width: 50%;
   background-color: #fefefe;
