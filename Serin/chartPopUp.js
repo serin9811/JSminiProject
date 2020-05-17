@@ -14,7 +14,7 @@ closeBtn.onclick = function() {
   document.getElementById("popupBoxT").style.display = "none";
 };
 
-//바 그래프 그리기
+// 바 그래프를 그리는 canvas
 var canvas = document.getElementById("myChart");
 
 /* eslint-disable no-undef */
@@ -23,11 +23,11 @@ function createGraph() {
   new Chart(canvas, {
     type: "bar",
     data: {
-    //바 그래프 x축
+      //바 그래프 x축
       labels: ["Java", "jQuery", "Javascript", "HTML", "CSS"],
       datasets: [
         {
-        //바 그래프 x축 데이터
+          //x축에 올라갈 그래프
           data: [10, 8, 10, 10, 10],
           backgroundColor: [
             "#0f4c81",
@@ -45,15 +45,15 @@ function createGraph() {
       legend: {
         display: false
       },
+      //바가 올라오는 속도
       animation: {
-      //바 그래프 올라가는 속도
         duration: 1500,
         easing: "easeOutQuart"
       },
       scales: {
         yAxes: [
           {
-          //y축 안보이게
+            //y축 안보이게
             display: false,
             //y축 scale
             ticks: {
