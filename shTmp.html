@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    /* background: #00b4ff; */
+    background: linear-gradient(#fb3 33.3%, #58a 0, #58a 66.6%, #5ba 0);
+    color: #333;
+}
+#background-wrap {
+    bottom: 0;
+	left: 0;
+	padding-top: 50px;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+.x1 {
+    top: 0;
+    left: 0;
+	transform: scale(0.65);
+}
+
+.x2 {
+	transform: scale(0.3);
+}
+
+.x3 {
+	transform: scale(0.5);
+}
+
+.x4 {
+	transform: scale(0.4);
+}
+
+.x5 {
+	transform: scale(0.55);
+}
+.cloud {
+	background: #fff;
+	border-radius: 200px;
+	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	height: 240px;
+	position: relative;
+	width: 700px;
+    transform: translateZ(.250px) translateX(-94%) translateY(var(--translateY));
+}
+.cloud:after, .cloud:before {
+    background: #fff;
+	content: '';
+	position: absolute;
+	z-indeX: -1;
+}
+.cloud:after {
+	border-radius: 200px;
+	height: 200px;
+	left: 100px;
+	top: -100px;
+	width: 200px;
+}
+
+.cloud:before {
+	border-radius: 400px;
+	width: 360px;
+	height: 360px;
+	right: 100px;
+	top: -180px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="background-wrap">
+        <div class="x1" id="cld">
+            <div class="cloud"></div>
+        </div>
+    
+        <div class="x2" id="cld">
+            <div class="cloud"></div>
+        </div>
+    
+        <div class="x3" id="cld">
+            <div class="cloud"></div>
+        </div>
+    
+        <div class="x4" id="cld">
+            <div class="cloud"></div>
+        </div>
+    
+        <div class="x5" id="cld">
+            <div class="cloud"></div>
+        </div>
+    </div>
+
+    <script>
+        var controller = new ScrollMagic.Controller();
+        window.onload = function(){
+            var scene = new ScrollMagic.Scene({
+                triggerElement: "cld"
+            })
+        }
+    </script>
+</body>
+</html>
