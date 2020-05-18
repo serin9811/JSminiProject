@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+
+    <style>
+        .backgroundIMG{
+            border: 0;
+    padding: 0; 
+    width: 100%;
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+        }
+
+        #cat{
+            position: fixed;
+            left: 250px;
+            top: 230px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+  <img src="https://i.ibb.co/8mRhhCs/background.jpg" alt="background" class = 'backgroundIMG'>
+  <img src="https://image.flaticon.com/icons/svg/1864/1864514.svg" alt="cat" id="cat">
+
+
+  <script type="text/javascript">  
+
+
+        
+
+    // 스크롤을 움직일때마다 해당 함수가 실행
+         window.addEventListener('scroll',catmove)
+
+
+         function catmove(){
+             let cat = document.getElementById('cat');
+             let _scrollTop = document.querySelector('html').scrollTop;
+            if(_scrollTop <200){
+                cat.style.left = (280+(_scrollTop*6))+'px';
+                cat.style.top = (230-_scrollTop*1)+'px';
+            }
+
+
+         }
+
+            
+
+  </script>
+</body>
+</html>
