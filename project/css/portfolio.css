@@ -1,0 +1,59 @@
+
+
+/* 팝업박스 전체페이지 (주변회색포함)*/
+ #popupBoxPf {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+/* 리얼팝업부분 화이트 */
+#realSpacePf {
+    background-color:white;
+    margin: 4% auto 4% auto;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+}
+
+
+/* 클로즈버튼이 포함된 부분 */
+.imgcontainerPf {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+
+/* 클로즈버튼 셋팅 */
+#closePf {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+#closePf:hover, #closePf:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.pf{background-color:#0f4c81; margin: 0; padding:0; max-width: 650px; font-family: 'Nanum Gothic', sans-serif;}
+.pf h2{text-align: center;color: white; font-size: 30px; margin-top: 5px;margin-bottom:15px; font-family: 'Black Han Sans', sans-serif;}
+.pf h3{font-weight: bold; margin: 0; margin-top: 5px; font-size: 20px;color: #0f4c81; padding: 5px;}
+.pf p{ color: #0f4c81; margin: 0; padding: 5px;}
+
+.pf-list{float:left;width:100%;}
+.pf-list.case{width:22.99999%;padding: 1%;}
+.pf-opacity,.pf-hover-opacity:hover{opacity:0.3}.pf-opacity-off,.pf-hover-opacity-off:hover{opacity:1}
+
+.pfSlides {display: none; position:relative; background-color: white; width: 98%; padding: 1%;}
+.pf video{width:100%;margin-bottom:-6px}
