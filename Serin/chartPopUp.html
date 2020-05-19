@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="src/styles.css" />
+    <!-- 차트그리는 라이브러리 -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
       integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E="
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
-      rel="stylesheet"
-    />
+    <!-- 웹폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet"/>
   </head>
 
   <body>
@@ -34,13 +33,15 @@
             <!-- 클로즈 버튼 .팀 -->
             <span id="closeT" title="Close Modal">&times;</span>
           </div>
-          <!-- 팝업시 나타나는 헤더와 바 그래프 -->
-          <h1>Scripting and Programming Language</h1>
-          <canvas id="myChart"></canvas>
+          <!-- 팝업시 나타나는 헤더와 바 그래프.세린 -->
+          <div id= chartPopUp_SR>
+            <h1>Scripting and Programming Language</h1>
+            <canvas id="myChart"></canvas>
+          </div>
         </div>
       </div>
     </section>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script> 
     <script src="src/index.js"></script>
   </body>
 </html>
