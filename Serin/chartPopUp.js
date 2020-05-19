@@ -14,11 +14,19 @@ closeBtn.onclick = function() {
   document.getElementById("popupBoxT").style.display = "none";
 };
 
-// 바 그래프를 그리는 canvas
+// 바 그래프를 그리는 canvas.세린
 var canvas = document.getElementById("myChart");
 
+var yLabels = {
+  0: "Biginner",
+  2: "Elementary",
+  4: "Intermediate",
+  6: "Upper-intermediate",
+  8: "Advanced"
+};
+
 /* eslint-disable no-undef */
-Chart.defaults.global.defaultFontFamily = "Jua";
+Chart.defaults.global.defaultFontFamily = "Black Han Sans";
 function createGraph() {
   new Chart(canvas, {
     type: "bar",
@@ -28,7 +36,7 @@ function createGraph() {
       datasets: [
         {
           //x축에 올라갈 그래프
-          data: [10, 8, 10, 10, 10],
+          data: [6, 8, 6, 4, 4],
           backgroundColor: [
             "#0f4c81",
             "#5781a7",
@@ -42,24 +50,32 @@ function createGraph() {
       ]
     },
     options: {
+      layout: {
+        padding: {
+          left: 50,
+          right: 50,
+          top: 60,
+          bottom: 50
+        }
+      },
       legend: {
         display: false
       },
       //바가 올라오는 속도
       animation: {
-        duration: 1500,
+        duration: 2000,
         easing: "easeOutQuart"
       },
       scales: {
         yAxes: [
           {
-            //y축 안보이게
-            display: false,
-            //y축 scale
             ticks: {
-              max: 11,
+              callback: function(value, index, values) {
+                return yLabels[value];
+              },
+              max: 8,
               min: 0,
-              stepSize: 1
+              stepSize: 2
             }
           }
         ]
