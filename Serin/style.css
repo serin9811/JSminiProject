@@ -46,12 +46,12 @@
 
 /* 팝업을 띄우는 메인버튼 */
 /* 팝업 헤더에서 사용되는 폰트 */
-h1 {
-  font-family: "Jua", sans-serif;
+#chartPopUp_SR h1 {
+  font-family: "Black Han Sans", sans-serif;
 }
 
 /* 팝업 헤더  */
-#popupBoxT h1 {
+#chartPopUp_SR h1 {
   width: 50%;
   background-color: #fefefe;
   color: #0f4c81;
