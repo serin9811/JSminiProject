@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+    padding: 0;
+    margin: 0;
+    width: 1920px;
+    height: 5700px;
+}
+#background-map{
+    background:black;
+    bottom: 0;
+	left: 0;
+	right: 0;
+	top: 2000px;
+    padding: 0;
+    margin: 0;
+    width: 1920px;
+    height: 3700px;
+    z-index: 100;
+}
+#background-wrap {
+    background: #00b4ff;
+    bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+    height: 2000px;
+    padding: 0;
+    margin: 0;
+	z-index: -1;
+}
+.x1 {
+    position: fixed;
+	transform: scale(2.5);
+    z-index: 10;
+    /* transition: 0.5s; */
+}
+
+.x2 {
+    position: fixed;
+	transform: scale(3);
+    z-index: 10;
+}
+
+.x3 {
+    position: fixed;
+	transform: scale(1.2);
+    z-index: 7;
+}
+
+.x4 {
+    position: fixed;
+	transform: scale(1.4);
+    z-index: 1;
+}
+
+.x5 {
+    position: fixed;
+	transform: scale(0.5);
+    z-index: 1;
+}
+
+.x6 {
+    position: fixed;
+	transform: scale(1.5);
+    z-index: 7;
+}
+
+.x7 {
+    position: fixed;
+	transform: scale(0.4);
+    z-index: 1;
+}
+.cloud {
+	background: linear-gradient(white 33.3%, lightgray 66.6%);
+	border-radius: 200px;
+    position: relative;
+	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.5);
+	height: 240px;
+	width: 700px;
+}
+.cloud:after, .cloud:before {
+    background: #fff;
+	content: '';
+	position: absolute;
+	z-indeX: -1;
+}
+.cloud:after {
+	border-radius: 200px;
+	height: 200px;
+	left: 100px;
+	top: -100px;
+	width: 200px;
+}
+
+.cloud:before {
+	border-radius: 400px;
+	width: 360px;
+	height: 360px;
+	right: 100px;
+	top: -180px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="background-wrap">
+        <div class="x1" id="c1" >
+            <div class="cloud" style="top: 200px; right: 0px; "></div>
+        </div>
+    
+        <div class="x2" id="c2">
+            <div class="cloud" style="top: 200px; right: 0px ;"></div>
+        </div>
+    
+        <div class="x3" id="c3">
+            <div class="cloud"  style="top: 200px; left: 900px;"></div>
+        </div>
+    
+        <div class="x4" id="c4">
+            <div class="cloud" style="top: 450px; left: 700px;"></div>
+        </div>
+    
+        <div class="x5" id="c5">
+            <div class="cloud" style="top:420px; left: -100px;"></div>
+        </div>  
+
+        <div class="x6" id="c6">
+            <div class="cloud" style="top: 500px; left: 800px;"></div>
+        </div>  
+
+        <div class="x7" id="c7">
+            <div class="cloud" style="top: 320px; left: 900px;"></div>
+        </div>  
+
+    </div>
+    <div id="background-map">
+    </div>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        window.onload = function(){
+            let scrollPosition = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            document.getElementById("c1").style.top = scrollPosition;
+            document.getElementById("c1").style.left = scrollPosition;
+            document.getElementById("c2").style.bottom = scrollPosition;
+            document.getElementById("c2").style.left = scrollPosition;
+            document.getElementById("c3").style.top = scrollPosition;
+            document.getElementById("c3").style.left = scrollPosition;
+            document.getElementById("c6").style.top = scrollPosition;
+            document.getElementById("c6").style.left = scrollPosition;
+        }
+
+        function scrollFunction() {
+            let scrollPosition = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            if (scrollPosition < 0.2) {
+                document.getElementById("c1").style.top = -(scrollPosition * 300) + '%';
+                document.getElementById("c1").style.left = -(scrollPosition * 300) + '%';
+
+                document.getElementById("c2").style.bottom = -(scrollPosition * 300) + '%';
+                document.getElementById("c2").style.left = -(scrollPosition * 300) + '%';
+
+                document.getElementById("c3").style.top = -(scrollPosition * 100) + '%';
+                document.getElementById("c3").style.left = (scrollPosition * 100) + '%';
+
+                document.getElementById("c6").style.top = (scrollPosition * 500) + '%';
+                document.getElementById("c6").style.left = (scrollPosition * 500) + '%';
+            }
+            if (scrollPosition > 0.02) {
+                document.getElementById("c4").style.top = -(scrollPosition * 50) + '%';
+                document.getElementById("c5").style.top = -(scrollPosition * 50) + '%';
+                document.getElementById("c7").style.top = -(scrollPosition * 50) + '%';
+            }
+        }
+    </script>
+</body>
+</html>
