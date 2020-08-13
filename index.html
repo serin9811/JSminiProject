@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRA ON THE ROAD</title>
+    <!-- favicon -->
+    <link rel='icon' href='media/icons/favicon.ico' type='image/x-icon' />
+
+    <!-- CSS 초기화 코드: JW-->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+
+        <!-- 메인페이지 인트로 -->
+        <div id="background-wrap">
+            <!-- 인트로: 구름 -->
+            <div class="x1" id="cld1">
+                <div class="cloud" style="top: 200px; right: 0px; "></div>
+            </div>
+            <div class="x2" id="cld2">
+                <div class="cloud" style="top: 200px; right: 0px ;"></div>
+            </div>
+            <div class="x3" id="cld3">
+                <div class="cloud" style="top: 200px; left: 900px;"></div>
+            </div>
+            <div class="x4" id="cld4">
+                <div class="cloud" style="top: 450px; left: 700px;"></div>
+            </div>
+            <div class="x5" id="cld5">
+                <div class="cloud" style="top:420px; left: -100px;"></div>
+            </div>
+            <div class="x6" id="cld6">
+                <div class="cloud" style="top: 500px; left: 800px;"></div>
+            </div>
+            <div class="x7" id="cld7">
+                <div class="cloud" style="top: 320px; left: 900px;"></div>
+            </div>
+        </div>
+
+        <!-- 스크롤 안내문 -->
+        <div id="notification">
+            <p>스크롤을 천천히<br>내리면서 감상하세요!</p>
+        </div>
+
+        <!-- <audio autoplay loop>
+            <source src="media/bgm.mp3" type="audio/ogg">
+        </audio>
+         -->
+        <!-- 인트로:  해 -->
+        <div>
+            <img id="sun" src="media/main/sun.png">
+            <img id="sunArm" src="media/main/sunArm.png">
+        </div>
+
+        <header class="top">
+            <!-- article 요소는 내용이 각기 독립적이고, 홀로 설 수 있는 내용 -->
+            <article class="ProgressBar">
+                <div class="article-title">
+                    <h1 class="sr-only">Follow me, please.</h1>
+                    <div class="progress-wrapper">
+                        <!-- <div class="progress-label">0%</div> -->
+                        <progress value="0" max="1561"></progress>
+                    </div>
+                    <!--end of. progress-wrapper-->
+                </div>
+                <!--end of. article-title-->
+            </article>
+            <div class="container">
+                <button class="btn-gnb sr-only" type="button">메뉴보기</button>
+                <nav>
+                    <h3 class="sr-only">주요메뉴</h3>
+                    <div class="progressGnb">
+                        <div class="circle active">
+                            <span class="label">1</span>
+                            <span class="title">Home</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle active">
+                            <span class="label">2</span>
+                            <span class="title">TimeLine</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle active">
+                            <span class="label">3</span>
+                            <span class="title">Skills</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle active">
+                            <span class="label">4</span>
+                            <span class="title">Portfolio</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle active">
+                            <span class="label">5</span>
+                            <span class="title">Contact</span>
+                        </div>
+                    </div>
+                    <!-- //end of progress -->
+                </nav>
+                <!-- //end of nav -->
+            </div>
+            <!-- //end of container -->
+        </header>
+
+        <!-- 메인페이지 맵 -->
+
+        <!-- 맵: 배경 -->
+        <img src="media/main/mainMap.png" alt="background" class='roadImg'>
+        <!-- 맵: 캐릭터 -->
+        <img src="media/main/cha1.png" alt="char" id="char">
+        <div class="arrow_box ">
+            <div class="imgBox">
+                <img src="media\main\leftC.png" alt="">
+                <div class="comment">
+                    <h1></h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- 지나가는 고양이 -->
+        <img src="media/icons/kitty1.png" id="kitty">
+
+        <!-- 맵: 아이콘 -->
+        <!-- TimeLine -->
+        <img src="media\icons\clock1.png" class="clickIcons" id="clock">
+        <img src="media\icons\school1.png" class="clickIcons" id="school">
+        <img src="media\icons\tree1.png" class="clickIcons" id="tree">
+        <img src="media\icons\mailbox1.png" class="clickIcons" id="mailbox">
+        <img src="media\icons\rock.png" id="rock">
+        <img src="media\icons\miniGame.png" id="miniGame">
+
+        <!-- 찾아라드레곤볼 은 아니고 보석 html-->
+        <div class="gemCollect">
+            <img src="media/gem/gem1.png" alt="gem1" class="gem" id="gem1">
+            <img src="media/gem/gem2.png" alt="gem2" class="gem" id="gem2">
+            <img src="media/gem/gem3.png" alt="gem3" class="gem" id="gem3">
+            <img src="media/gem/gem4.png" alt="gem4" class="gem" id="gem4">
+        </div>
+
+        <div class="Realgem">
+            <img src="media/gem/gem1.png" alt="gem1" id="Rgem1">
+            <img src="media/gem/gem2.png" alt="gem2" id="Rgem2">
+            <img src="media/gem/gem3.png" alt="gem3" id="Rgem3">
+            <img src="media/gem/gem4.png" alt="gem4" id="Rgem4">
+        </div>
+        <img src="media/gem/sam1.png" alt="gem3" id="sam">
+
+        <!-- 산에숨겨논 보석 -->
+
+        <img src="media/gem/bling.png" alt="bling" id="bling">
+        <img src="media/gem/bling2.png" alt="bling2" id="bling2">
+        <img src="media/gem/Mountain.png" alt="Mountain" id="mountain">
+
+
+        <!-- 클릭이모티콘 -->
+        <img src="media\icons\click.png" class="click" id="clickClock">
+
+
+
+        <!-- 맵: 흘러가는 구름 -->
+        <div class="mapCld" id="cld8">
+            <div class="cloud"></div>
+        </div>
+        <div class="mapCld" id="cld9">
+            <div class="cloud"></div>
+        </div>
+        <div class="mapCld" id="cld10">
+            <div class="cloud"></div>
+        </div>
+        <div class="mapCld" id="cld11">
+            <div class="cloud"></div>
+        </div>
+        <div class="mapCld" id="cld12">
+            <div class="cloud"></div>
+        </div>
+        <div class="mapCld" id="cld13">
+            <div class="cloud"></div>
+        </div>
+        <div class="mapCld" id="cld14">
+            <div class="cloud"></div>
+        </div>
+        <div class="mapCld" id="cld15">
+            <div class="cloud"></div>
+        </div>
+
+
+
+
+        <!-- 섹션파트1 .TimeLine by JW-->
+        <section class="part1 TimeLine">
+
+            <!-- 팝업창  배경포함 .TimeLine-->
+            <div id='popupBoxT'>
+
+                <!-- 팝업하얀부분 .TimeLine -->
+                <div id='realSpaceT'>
+                    <!-- 클로즈 버튼 컨테이너 .TimeLine -->
+                    <div class="imgcontainerT">
+                        <!-- 클로즈 버튼 .TimeLine -->
+                        <span id="closeT" title="Close Modal">&times;</span>
+                    </div>
+                    <div class="timeline">
+                        <h1>My Life, Timeline &darr;</h1>
+                        <p class="blinking">!! Slowly !! Scroll down mouse</p>
+                        <ul>
+                            <li class="out-view">
+                                <div>
+                                    <time>1995</time> 한시간에 버스 한 대 겨우겨우 다니는 읍내 나가면 죄다 아빠 친구 아니면 할머니 친구인 인구 5만명 작은 깡시골 첫째딸로 태어남
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>2014</time> 자라나는 내내 사고한번 안치고 큰 병 한번 앓지 않고 무난하고 무탈하게 대학교 입학! 드디어 서울로 상경!
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>2018</time> 졸업하자마자 학창시절 꿈이였던 사육사가 되지 못해 들어갔던 동물병원. 30살에 칼같이 짤리는 선배를 보고 눈물흘리며 퇴사.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>2019</time> 뜻밖의 웹디자이너가 되어 쇼핑몰입사! 분명 웹디자이너로 들어갔는데?! CS, 웹디자인, MD컨텍, 물건사입, 경리일까지?!
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>2019</time> 그래도 너무 사랑했던 회사였으나 어느날 사장님 "아버님"의 경영난으로 우리 회사까지 와르르 와르르 폐업 ...
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>2020</time> 먹고 살길을 찾아 도전하게 된 코딩의 세계에 입문 JAVA SQL HTML CSS JS 듣도보도 못했던 용어들이 난무하고 '왜 안되죠?! '를 외쳐대던 날들
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>2020</time> 한 사람의 몫을 해내는 개발자가 되기위해 1000번의 NullPointerException과 F5를 연타해도 반응하지 않는 아이콘들.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>현재</time> 눈물없이 들을 수 없는 피땀어린 노력의 결실을 펼쳐보겠습니다! 좋은 결과 기다리겠습니다!
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="toGoTop">top</button>
+
+                        <!-- end of .TimeLine -->
+                    </div>
+                </div>
+                <!-- end of . realSpaceT -->
+            </div>
+            <!-- end of. popupBoxT -->
+
+
+        </section>
+        <!-- end of. 섹션파트1 .TimeLine by JW-->
+
+
+
+        <!-- 섹션파트2 .Portfolio by SH -->
+        <section class="part1 sh">
+            <!-- 팝업창  배경포함 .팀-->
+            <div id='popupBoxPf'>
+
+                <!-- 팝업하얀부분 .팀 -->
+                <div class="pf" id='realSpacePf'>
+                    <!-- 클로즈 버튼 컨테이너 .팀 -->
+                    <div class="imgcontainerPf">
+                        <!-- 클로즈 버튼 .팀 -->
+                        <span id="closePf" title="Close Modal">&times;</span>
+                        <h2>My Portfolio</h2>
+                    </div>
+                    <!-- 포트폴리오 페이지 -->
+                    <div>
+                        <!-- 포트폴리오 페이지: 프로젝트별 이미지 -->
+                        <div class="pfSlides">
+                            <video src="media/pf/1.mp4" autoplay muted loop></video>
+                            <div class="pf-container">
+                                <h3>Lorem Ipsum1</h3>
+                                <p>1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, sodales ac leo et, tempus tristique nibh. Proin at risus urna.</p>
+                            </div>
+                        </div>
+
+                        <div class="pfSlides">
+                            <video src="media/pf/2.mp4" autoplay muted loop></video>
+                            <div class="pf-container">
+                                <h3>Lorem Ipsum2</h3>
+                                <p>2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, sodales ac leo et, tempus tristique nibh. Proin at risus urna.</p>
+                            </div>
+                        </div>
+
+                        <div class="pfSlides">
+                            <video src="media/pf/3.mp4" autoplay muted loop></video>
+                            <div class="pf-container">
+                                <h3>Lorem Ipsum3</h3>
+                                <p>3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, sodales ac leo et, tempus tristique nibh. Proin at risus urna.</p>
+                            </div>
+                        </div>
+
+                        <div class="pfSlides">
+                            <video src="media/pf/4.mp4" autoplay muted loop></video>
+                            <div class="pf-container">
+                                <h3>Lorem Ipsum4</h3>
+                                <p>4Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, sodales ac leo et, tempus tristique nibh. Proin at risus urna.</p>
+                            </div>
+                        </div>
+
+                        <div class="pfSlides">
+                            <video src="media/pf/5.mp4" autoplay muted loop></video>
+                            <div class="pf-container">
+                                <h3>Lorem Ipsum5</h3>
+                                <p>5Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, sodales ac leo et, tempus tristique nibh. Proin at risus urna.</p>
+                            </div>
+                        </div>
+
+                        <div class="pfSlides">
+                            <video src="media/pf/6.mp4" autoplay muted loop></video>
+                            <div class="pf-container">
+                                <h3>Lorem Ipsum6</h3>
+                                <p>6Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, sodales ac leo et, tempus tristique nibh. Proin at risus urna.</p>
+                            </div>
+                        </div>
+                        <div class="pfSlides">
+                            <video src="media/pf/7.mp4" autoplay muted loop></video>
+                            <div class="pf-container">
+                                <h3>Lorem Ipsum7</h3>
+                                <p>7Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, sodales ac leo et, tempus tristique nibh. Proin at risus urna.</p>
+                            </div>
+                        </div>
+                        <div class="pfSlides">
+                            <video src="media/pf/8.mp4" autoplay muted loop></video>
+                            <div class="pf-container">
+                                <h3>Lorem Ipsum8</h3>
+                                <p>8Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, sodales ac leo et, tempus tristique nibh. Proin at risus urna.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 포트폴리오 페이지: 하단 프로젝트 목록-->
+                    <div>
+                        <div class="pf-list case">
+                            <img class="pfList pf-opacity pf-hover-opacity-off" src="media/pf/1.jpg" style="width:100%;cursor:pointer" onclick="pfCurrentDivs(1)" title="1">
+                        </div>
+                        <div class="pf-list case">
+                            <img class="pfList pf-opacity pf-hover-opacity-off" src="media/pf/2.jpg" style="width:100%;cursor:pointer" onclick="pfCurrentDivs(2)" title="2">
+                        </div>
+                        <div class="pf-list case">
+                            <img class="pfList pf-opacity pf-hover-opacity-off" src="media/pf/3.jpg" style="width:100%;cursor:pointer" onclick="pfCurrentDivs(3)" title="3">
+                        </div>
+                        <div class="pf-list case">
+                            <img class="pfList pf-opacity pf-hover-opacity-off" src="media/pf/4.jpg" style="width:100%;cursor:pointer" onclick="pfCurrentDivs(4)" title="3">
+                        </div>
+                        <div class="pf-list case">
+                            <img class="pfList pf-opacity pf-hover-opacity-off" src="media/pf/5.jpg" style="width:100%;cursor:pointer" onclick="pfCurrentDivs(5)" title="5">
+                        </div>
+                        <div class="pf-list case">
+                            <img class="pfList pf-opacity pf-hover-opacity-off" src="media/pf/6.jpg" style="width:100%;cursor:pointer" onclick="pfCurrentDivs(6)" title="6">
+                        </div>
+                        <div class="pf-list case">
+                            <img class="pfList pf-opacity pf-hover-opacity-off" src="media/pf/7.jpg" style="width:100%;cursor:pointer" onclick="pfCurrentDivs(7)" title="7">
+                        </div>
+                        <div class="pf-list case">
+                            <img class="pfList pf-opacity pf-hover-opacity-off" src="media/pf/8.jpg" style="width:100%;cursor:pointer" onclick="pfCurrentDivs(8)" title="8">
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- end of. 섹션파트2 .Portfolio by SH -->
+
+
+        <!-- 섹션파트3 .form by MR -->
+        <section class="part1 MIRA">
+
+            <!-- 팝업창  배경포함 .팀-->
+            <div id='popupBoxf'>
+                <!-- 팝업하얀부분 .팀 -->
+                <div id='realSpacef'>
+                    <!-- 클로즈 버튼 .팀 -->
+                    <span id="closef" title="Close Modal">&times;</span>
+                    <aside id="headMR">
+                        <h2>Contact Me!</h2>
+
+                    </aside>
+                    <!-- 내용들어가는 부분 미라 -->
+                    <div class="mainMR">
+
+                        <div class="contactMe">
+                            <p>
+                                We would love to hear from you! </br>
+                                Please use the <b>Contact Form</b> to send us a message.
+                            </p>
+                            <!-- START HERE -->
+                            <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+                            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+                            <!-- Style The Contact Form How Ever You Prefer -->
+                            <link rel="stylesheet" href="css/style.css">
+
+                            <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycby7207QgeRRV8qoiUAtW2XFHEi-d5zjMehk_KgK/exec">
+                                <!-- change the form action to your script url -->
+
+                                <div class="form-elements">
+                                    <fieldset class="pure-group">
+                                        <label for="name">Name: </label>
+                                        <input id="name" name="name" placeholder="" />
+                                    </fieldset>
+
+                                    <fieldset class="pure-group">
+                                        <label for="message">Message: </label>
+                                        <textarea id="message" name="message" rows="10"></textarea>
+                                    </fieldset>
+
+                                    <fieldset class="pure-group">
+                                        <label for="email"><em>Your</em> Email Address:</label>
+                                        <input id="email" name="email" type="email" value="" required placeholder="" />
+                                    </fieldset>
+
+
+                                    <button class="button-success pure-button button-xlarge">
+                                  <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+                                </div>
+
+                                <!-- Customise the Thankyou Message People See when they submit the form: -->
+                                <div class="thankyou_message" style="display:flex;">
+                                    <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
+                                </div>
+
+                            </form>
+
+                            <!-- Submit the Form to Google Using "AJAX" -->
+                            <!-- <script data-cfasync="false" src="form-submission-handler.js"></script> -->
+
+                            <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+                            <!-- END -->
+                        </div>
+                        <!-- 가운데부분 미라  -->
+
+                        <div id="middle3MR">
+                            <div class="contectIconMR">
+                                <!-- <a href="mailto:nkskjjbb@gmail.com" target="_blank">
+                                    <img src="https://i.ibb.co/hyx10N2/MAIL.png" alt="MAIL"></a>
+                                <h1>Mail</h1> -->
+                                <a href="https://github.com/serin9811/JSminiProject.github.io" target="_blank"> <img src="https://image.flaticon.com/icons/svg/2680/2680853.svg" alt="gitHerb"></a>
+                                <h1>GitHub</h1>
+                                <a href="https://www.naver.com/" target="_blank"> <img src="https://i.ibb.co/cDcMjQS/BLOG.png" alt="BLOG"></a>
+                                <h1>Blog</h1>
+                                <a href="https://www.facebook.com/OracleKorea" target="_blank"> <img src="https://i.ibb.co/Vx7k9hj/SNS.png" alt="SNS"> </a>
+                                <h1>SNS</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- end of. 섹션파트3 ..form by MR -->
+        <!-- 섹션파트4 .form by MR -->
+        <section class="part1 G">
+            <!-- 팝업창  배경포함 .팀-->
+            <div id="popupBoxG">
+                <!-- 팝업하얀부분 .팀 -->
+                <div id="realSpaceG">
+                    <!-- 클로즈 버튼 컨테이너 .팀 -->
+                    <div class="imgcontainerG">
+                        <!-- 클로즈 버튼 .팀 -->
+                        <span id="closeG" title="Close Modal">&times;</span>
+                    </div>
+                    <!-- 팝업시 나타나는 헤더와 바 그래프.세린 -->
+                    <div id=chartPopUp_SR>
+                        <h1>Scripting and Programming Language</h1>
+                        <!-- 그래프에 올라가는 language logo -->
+                        <img src="media/icons/javaIcon.png" id="JavaIcon">
+                        <img src="media/icons/jqueryIcon.png" id="JQueryIcon">
+                        <img src="media/icons/jsIcon.png" id="JSIcon">
+                        <img src="media/icons/htmlIcon.png" id="HTMLIcon">
+                        <img src="media/icons/cssIcon.png" id="CssIcon">
+                        <div class='chart-container'>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of. 섹션파트4 ..form by SR -->
+
+
+
+        <!-- 섹션파트5 광고 배너 .form by JW -->
+        <section class="avg">
+            <div id="slides">
+                <div class="slides-topbg">
+                    <ol class="slides-pagination clearfix">
+                        <li>
+                            <a href="http://book.naver.com/bookdb/book_detail.nhn?bid=10191151" target="_blank"></a>
+                        </li>
+                        <li class="youtube">
+                            <a href="https://youtu.be/oJlCC1DutbA" target="_blank">
+                                <iframe width="622" height="225" src="https://www.youtube.com/embed/wfbWxtHHrgM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </a>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                    </ol>
+                </div>
+                <!-- <div class="nav clearfix">	
+                <a href="#" class="slides-previous">이전</a>
+                <a href="#" class="slides-next">다음</a>
+            </div> -->
+                <ul class="slides-container clearfix">
+                    <li><a href="#">스틸컷1</a></li>
+                    <li><a href="#">스틸컷2</a></li>
+                    <li><a href="#">스틸컷3</a></li>
+                </ul>
+                <a class="pause">시작</a>
+                <img src="media/ad/source.gif" alt="카운트다운" id="countDown">
+            </div>
+            <div class="rollingPop" style="display: block;">
+                <p class="rollingPop_text1"><strong class="keyword">마우스</strong>를 올려<br>최고의 자바동영상을</p>
+                <p class="rollingPop_text2"><strong class="keyword">고화질</strong>로<br>감상하세요</p>
+            </div>
+            <!-- .slides 닫음 -->
+        </section>
+        <!-- end of. 섹션파트5 광고 배너 ..form by JW -->
+
+
+
+        <!-- 섹션파트5-1 .광고 유투브 from by JW     -->
+        <section class="AD_POP">
+
+            <!-- 팝업띄우는 버튼 .팀 -->
+
+            <button id='AD_POP_button'>SAY</button>
+
+            <!-- 팝업창  배경포함 .팀-->
+            <div id='AD_POP_box'>
+                <!-- 팝업하얀부분 .팀 -->
+                <div id='AD_POP_boxin'>
+                    <!-- 클로즈 버튼 컨테이너 .팀 -->
+                    <div class="AD_POP_clo">
+                        <!-- 클로즈 버튼 .팀 -->
+                        <span id="AD_POP_clobut" title="Close Modal">&times;</span>
+                    </div>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wfbWxtHHrgM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- end of 섹션파트5-1 .광고 유투브 from by JW     -->
+
+        <!-- 섹션파트6 .form by SH -->
+        <section class="part1 MINIGAME">
+            <!-- 팝업창  배경포함 .팀-->
+            <div id="popupBoxMiniGame">
+                <!-- 팝업하얀부분 .팀 -->
+                <div id="realSpaceMiniGame">
+                    <!-- 클로즈 버튼 컨테이너 .팀 -->
+                    <div class="imgcontainerMiniGame">
+                        <!-- 클로즈 버튼 .팀 -->
+                        <h1>쩜프쩜프!</h1>
+                        <span id="closeMiniGame" title="Close Modal">&times;</span>
+                    </div>
+                    <!-- 미니게임 -->
+                    <div id="mgContainer">
+                        <canvas id="mg"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of. 섹션파트6 ..form by SH -->
+
+
+        <!-- start 팀원 소개 섹션 -->
+
+
+        <section class="part_team">
+            <!-- 팝업창  배경포함 .팀소개-->
+            <div id="teamOne">
+                <!-- 팝업하얀부분 .팀소개 -->
+                <div id="teamOnePopUP" class="popULine">
+                    <!-- 클로즈 버튼 컨테이너 .팀소개 -->
+                    <div class="imgcontainerTeamOne">
+                        <!-- 클로즈 버튼 .팀소개 -->
+                        <span id="closeTemaOne" title="Close Modal">&times;</span>
+                    </div>
+                    <div id="who">
+
+
+                        <section>
+                            <div class="container">
+                                <div class="row flex-center sm-no-flex">
+
+
+                                    <!-- <div class="pull-right sm-no-float col-md-8"> -->
+                                    <div class="pull-left col-md-4 sm-text-center">
+                                        <div class="team-overview" id="AllTeamOne">
+                                            <h2>Who Are We?</h2>
+                                            <a>지원이의 수세미</a>
+                                            <div style="width: 400px;">
+                                                <p>
+                                                    팀장: 김미라<br> 팀원: 김수희, 김지원, 허세린</br><br> 주제: 게임적 요소를 활용한 스토리텔링 형식의 포트폴리오
+                                            </div>
+                                            </p>
+                                        </div>
+                                        <div class="team-overview" id="MIRA">
+                                            <h2>MIRA</h2>
+                                            <a>팀장 / 보석모으기 / 콘텍트미 팝업 </a>
+                                            <div style="width: 400px;">
+                                                <p>
+                                                    일주일이 조금 넘는 시간동안 무언가 몰두해서 해낸다는 기분이 참 좋았습니다. 좋은 사람들과 좋아하는(?) 일을 같이 해낸다는 기쁘다는 것을 알게되었습니다.<br> 함께해준 우리 팀 모두 고맙습니다.
+                                            </div>
+                                            </p>
+                                        </div>
+                                        <div class="team-overview" id="JIWON">
+                                            <h2>JIWON</h2>
+                                            <a>광고판 만들기 / 타임라인 팝업 / 메뉴 </a>
+                                            <div style="width: 400px;">
+                                                <p>
+                                                    <!-- 새로운 일을 시도하기로 했습니다. <br>
+                                            개발 공부를 시작한 것입니다. 저는 이전까지 생각해온 커리어 계획을 미루고 공부를 하러 이곳에 왔습니다. <br>
+                                            하루에 대부분의 시간을 학원에서 자바를 공부했습니다. 
+                                            밤을 새며 알고리즘 공부를 하기도 하며 팀과 프로젝트를 위해 회의를 합니다.<br><br> 
+                                            (중략)<br>  -->
+                                                    팀장으로서 팀을 훌륭하게 맺어주신 미라님, 길을 잃지 않게 방향을 제시해주었던 수희님, <br> 기발한 아이디어와 창의력으로 도와주신 세린님 모두 감사드립니다. 즐거웠습니다.
+                                            </div>
+                                            </p>
+                                        </div>
+                                        <div class="team-overview" id="SUHEE">
+                                            <h2>SUHEE</h2>
+                                            <a>인트로 구름 / 포트폴리오 팝업 /  미니게임</a>
+
+                                            <div style="width: 400px;">
+                                                <p>
+                                                    하고 싶은 것과 할 수 있는 것의 차이를 느끼고 힘들 때마다, 좋은 팀원들 덕분에 다시 즐겁게 작업할 수 있었습니다. '즐길 수 있는 것을 하자'는 처음 목표대로 한 주동안 (피곤해도) 즐겁게 지냈던 것 같습니다. 4명이라 다들 1.5배로 고생한 것 같아서, 안타깝고 미안하고 고마워요..우리조 쵝오..</div>
+                                            </p>
+                                        </div>
+                                        <div class="team-overview" id="SERIN">
+                                            <h2>SERIN</h2>
+                                            <a>그래프 팝업 / 고양이와 바위깨기</a>
+
+                                            <div style="width: 400px;">
+                                                <p>처음으로 팀원들과 함께 프로젝트를 진행해 보았는데 저의 부족한 부분을 잘 알게되었고 도와준 팀원들에게 너무 고맙습니다. 이때까지는 사용자 입장에서 당연하게 받아들였던 것들이 개발자입장에서 어떠한지 느낄 수 있었던 계기가 되었습니다. 감사합니다!</div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- /end col-md-4 -->
+
+
+
+                                    <!-- 사진으로 맴버소개하는 부분 -->
+
+                                    <ul class="team-members">
+                                        <!-- single member row starts -->
+                                        <li class="clearfix">
+                                            <div class="member-details" id="Member1">
+                                                <div>
+                                                    <img src="media\mini\mr.png" alt="UI Designer">
+                                                    <div class="member-info">
+                                                        <h3>Mira</h3>
+                                                        <p>Developer</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="member-details" id="Member2">
+                                                <div>
+                                                    <img src="media\mini\jw.png" alt="UI Designer">
+                                                    <div class="member-info">
+                                                        <h3>Jiwon</h3>
+                                                        <p>Developer</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </li>
+                                        <!-- /single member row ends -->
+
+
+                                    </ul>
+                                    <!-- /end team-photos -->
+                                    <ul class="team-members">
+                                        <li class="clearfix">
+                                            <div class="member-details" id="Member3">
+                                                <div>
+                                                    <img src="media\mini\sh.png" alt="UI Designer">
+                                                    <div class="member-info">
+                                                        <h3>Suhee</h3>
+                                                        <p>Developer</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="member-details" id="Member4">
+                                                <div>
+                                                    <img src="media\mini\sr.png" alt="UI Designer">
+                                                    <div class="member-info">
+                                                        <h3>Serin</h3>
+                                                        <p>Developer</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </li>
+                                        <!-- /single member row ends -->
+
+
+                                    </ul>
+                                    <!-- /end team-photos -->
+                                    <!-- </div> -->
+                                    <!-- /end col-md-8 -->
+
+
+                                </div>
+                                <!-- /end row -->
+                            </div>
+                            <!-- /end container -->
+                        </section>
+
+                        <!-- extra -->
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end 팀원 소개 섹션 -->
+
+
+
+        <!-- start 스크롤 펍업 al -->
+
+        <!-- 스크롤안내 첫 안내문 by JW-->
+        <section class="alertFirst">
+
+            <!-- 팝업창  배경포함 .TimeLine-->
+            <div id='popupBoxAl'>
+
+                <!-- 팝업하얀부분 .TimeLine -->
+                <div id='realSpaceAl'>
+                    <!-- 클로즈 버튼 컨테이너 .TimeLine -->
+                    <div class="imgcontainerAl">
+                        <!-- 클로즈 버튼 .TimeLine -->
+                        <span id="closeAl" title="Close Modal">&times;</span>
+                    </div>
+                    <div>
+                        <h1> 스크롤을 천천히 </br>내리면서 즐겨보세요! </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- 자바스크립트 영역 -->
+        <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src='js/map.js'></script>
+        <script src='js/cloud.js'></script>
+        <script src="js/main.js"></script>
+        <script src="js/miniGame.js"></script>
+        <script src="js/findGem.js"></script>
+        </div>
+        <!--end of. wrap -->
+</body>
+
+</html>
