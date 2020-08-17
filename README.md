@@ -1,14 +1,15 @@
-# JSminiProject
+#MiniMe 
+
 ## General info
-이 프로젝트는 포트폴리오 웹 페이지 구현 프로젝트입니다.
+이 프로젝트는 나 자신을 캐릭터화한 애니메이션이 돋보이는 웹 페이지 프로젝트입니다.
 
-## Languages 
+## Main Languages 
 
-- Javascript
-- HTML
-- CSS
+- Javascript ES5
+- HTML5
+- CSS3
 
-## Team members
+## Contributors
 
 - 김미라  [Mira Kim](https://github.com/mirasoy)
 - 김수희 [Suhee Kim](https://github.com/dropTheBit-SH)
